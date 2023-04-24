@@ -7,14 +7,11 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int num = 0;
-	int val = 0;
+	int i = 0, int num = 0, int val = 0;
 	va_list args;
 	int (*f)(va_list);
 
 	va_start(args, format);
-
 	if (format == NULL)
 		return (-1);
 	while (format[i])
