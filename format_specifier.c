@@ -8,12 +8,13 @@ int (*format_specifier(const char *format))(va_list)
 {
 	int i;
 
-	func_t my_array[6] = {
+	func_t my_array[7] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"%", print_percent},
 		{"d", print_int},
 		{"i", print_inti},
+		{"b", print_bin},
 		{NULL, NULL}};
 
 	for (i = 0; my_array[i].t != NULL; i++)

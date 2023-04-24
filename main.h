@@ -24,4 +24,5 @@ int print_str(va_list);
 int print_percent(va_list);
 int print_int(va_list args);
 int print_inti(va_list args);
+int print_bin(va_list n);
 #endif
