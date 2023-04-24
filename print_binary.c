@@ -9,10 +9,11 @@
 int print_bin(va_list n)
 {
 	char ch[10];
-	int i, val;
-	int count = 0, g;
+	unsigned int i, val;
+	unsigned int count = 0;
+	int g;
 
-	val = va_arg(n, int);
+	val = va_arg(n, unsigned int);
 	if (val)
 
 	{
