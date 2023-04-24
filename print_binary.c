@@ -8,7 +8,7 @@
  */
 int print_bin(va_list n)
 {
-	char ch[10];
+	char ch[32];
 	unsigned int i, val;
 	unsigned int count = 0;
 	int g;
