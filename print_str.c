@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "main.h"
 /**
  * print_str - function that prints a string
  * @args: Argument input
