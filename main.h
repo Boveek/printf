@@ -8,11 +8,17 @@ int _printf(const char *format, ...);
 int (*format_specifier(const char *format))(va_list);
 int print_char(va_list args);
 
+/**
+ * struct func - typedef struct.
+ *
+ * @t: the charrater pointer
+ * @f: the function pointer
+ */
 typedef struct func
 {
 	char *t;
 	int (*f)(va_list);
-}func_t;
+} func_t;
 
 int print_str(va_list);
 int print_percent(va_list);
