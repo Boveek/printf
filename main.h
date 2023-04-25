@@ -7,6 +7,7 @@
 int _printf(const char *format, ...);
 int (*format_specifier(const char *format))(va_list);
 int print_char(va_list args);
+void print_buffer(int *n);
 
 /**
  * struct func - typedef struct.
@@ -19,7 +20,7 @@ typedef struct func
 	char *t;
 	int (*f)(va_list);
 } func_t;
-
+int print_rot13(va_list format);
 int print_str(va_list);
 int print_percent(va_list);
 int print_int(va_list args);
