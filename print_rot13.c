@@ -11,7 +11,7 @@ int print_rot13(va_list format)
 	char *ch;
 	char rec[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char ret[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int cnt, i = 0, val = 0, p = 0;
+	int cnt, i = 0, val = 0;
 
 	ch = va_arg(format, char *);
 
