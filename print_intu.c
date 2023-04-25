@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_int - function that prints an integer
+ * print_intu - function that prints an integer
  * @args: Argument input
  * Return: On success returns number of character printed
  */

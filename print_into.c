@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *
- *
- *
+ * print_into - function that prints an octal number
+ * @args: argument input
+ * Return: On success return count of numbers printed
  */
 int print_into(va_list args)
 {
@@ -29,5 +29,5 @@ int print_into(va_list args)
 		i--;
 	}
 	count += write(1, convert, num);
-	return(count);
+	return (count);
 }

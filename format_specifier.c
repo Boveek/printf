@@ -2,7 +2,7 @@
 /**
  * format_specifier - function that checks the format specifier used
  * @format: Input string
- * Return: An Integer
+ * Return: An Integer on success
  */
 int (*format_specifier(const char *format))(va_list)
 {

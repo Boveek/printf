@@ -6,7 +6,7 @@
  */
 int print_intX(va_list args)
 {
-       	unsigned int k = va_arg(args, unsigned int), temporary, n;
+	unsigned int k = va_arg(args, unsigned int), temporary, n;
 	unsigned int num[6] = {10, 11, 12, 13, 14, 15};
 	char alp[6] = "ABCDEF";
 	char convert[11];
