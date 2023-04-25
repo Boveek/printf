@@ -10,6 +10,8 @@ int print_str(va_list args)
 	int count = 0;
 
 	c = va_arg(args, char*);
+	if (c == NULL)
+		return(0);
 	if (c)
 	{
 		while (*c != '\0')
