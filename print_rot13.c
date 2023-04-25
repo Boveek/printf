@@ -27,7 +27,7 @@ int print_rot13(va_list format)
 				break;
 			}
 		}
-		if (rec[cnt + 1] == '\0')
+		if (ch[i] != rec[cnt])
 		{
 			val += write(1, &ch[i], 1);
 		}
