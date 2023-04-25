@@ -12,6 +12,8 @@ int print_rev(va_list str)
 
 	ch = va_arg(str, char *);
 
+	if (ch == NULL)
+		return(0);
 	if (ch)
 	{
 		while (ch[i] != '\0')
@@ -21,8 +23,7 @@ int print_rev(va_list str)
 
 		for (c = i; c >= 0; c--)
 		{
-			res = write(1, &ch[c], 1);
-			res += res;
+			res += write(1, &ch[c], 1);
 		}
 	}
 
