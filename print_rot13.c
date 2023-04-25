@@ -24,18 +24,15 @@ int print_rot13(va_list format)
 		{
 			if (ch[i] == rec[cnt])
 			{
-				val = write(1, &ret[cnt], 1);
-				val += val;
+				val += write(1, &ret[cnt], 1);
 				break;
 			}
-			if (rec[cnt + 1] == '\0' && ch[i] != rec[cnt])
-			{
-				val = write(1, &ch[i], 1);
-				val += val;
-			}
+		}
+		if (rec[cnt + 1] == '\0')
+		{
+			val += write(1, &ch[i], 1);
 		}
 		i++;
 	}
-
-return (val);
+	return (val);
 }
