@@ -20,6 +20,7 @@ typedef struct func
 	char *t;
 	int (*f)(va_list);
 } func_t;
+int print_rev(va_list str);
 int print_rot13(va_list format);
 int print_str(va_list);
 int print_percent(va_list);
