@@ -21,7 +21,7 @@ int print_rev(va_list str)
 			i++;
 		}
 
-		for (c = i; c >= 0; c--)
+		for (c = i - 1; c >= 0; c--)
 		{
 			res += write(1, &ch[c], 1);
 		}
