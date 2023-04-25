@@ -19,25 +19,25 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			f = format_specifier(&format[i + 1]);
-			if (f != NULL)
+			if (f)
 			{
 				val = f(args);
 				num = num + val;
 				i = i + 2;
 				continue;
 			}
-			if (format[i + 1] == '\0')
+			else
 			{
+			if (format[i + 1] == '\0')
 				break;
-			}
 			if (format[i + 1] != '\0')
 			{
-				val = write(1, &format[i + 1], 1);
+				val = write(1, &format[i], 1);
 				num = num + val;
-				i = i + 2;
+				i = i + 1;
 				continue;
 			}
-			i++;
+			}
 		}
 		else if (format[i] != '%')
 		{

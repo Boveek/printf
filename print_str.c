@@ -11,7 +11,7 @@ int print_str(va_list args)
 
 	c = va_arg(args, char*);
 	if (c == NULL)
-		return (0);
+		return (-1);
 	if (c)
 	{
 		while (*c != '\0')
