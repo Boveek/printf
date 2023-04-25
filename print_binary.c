@@ -9,18 +9,22 @@
 int print_bin(va_list n)
 {
 	char ch[32];
-	unsigned int i, val;
-	unsigned int count = 0;
+	int i, val;
+	int count = 0;
 	int g;
 
-	val = va_arg(n, unsigned int);
+	val = va_arg(n, int);
 	if (val)
-
 	{
 	for (i = 0; val > 0; i++)
 	{
-		ch[i] = (val % 2) + '0';
+		ch[i] = (val % 2) + '0' ;
 		val = val / 2;
+	}
+	
+	for (g = i; g < 32; g++)
+	{
+		ch[g] = '0';
 	}
 
 	for (g = i; g >= 0; g--)
