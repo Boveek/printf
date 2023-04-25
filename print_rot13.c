@@ -28,10 +28,10 @@ int print_rot13(va_list format)
 			}
 		}
 		if (rec[cnt + 1] == '\0')
- 		{
- 			val += write(1, &ch[i], 1);
- 		}
- 		i++;
+		{
+			val += write(1, &ch[i], 1);
+		}
+		i++;
 	}
 	return (val);
 }
