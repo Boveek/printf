@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rot13 - a function thats encode strings in Rot'13
+ * print_rot13 - a function thats encode strings in Rot13
  * @format: the string to be encoded
  *
  * Return: the count of string printed
@@ -16,7 +16,7 @@ int print_rot13(va_list format)
 	ch = va_arg(format, char *);
 
 	if (ch == NULL)
-		return (NULL);
+		return (0);
 
 	while (ch[i])
 	{
