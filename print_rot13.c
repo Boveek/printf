@@ -18,7 +18,7 @@ int print_rot13(va_list format)
 	if (ch == NULL)
 		return (0);
 
-	while (ch[i])
+	while (ch)
 	{
 		for (cnt = 0; rec[cnt] != '\0'; cnt++)
 		{
