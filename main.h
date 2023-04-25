@@ -20,6 +20,10 @@ typedef struct func
 	int (*f)(va_list);
 } func_t;
 
+int print_intX(va_list);
+int print_intx(va_list);
+int print_into(va_list);
+int print_intu(va_list);
 int print_str(va_list);
 int print_percent(va_list);
 int print_int(va_list args);
