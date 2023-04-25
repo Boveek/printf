@@ -20,6 +20,11 @@ typedef struct func
 	char *t;
 	int (*f)(va_list);
 } func_t;
+
+int print_intX(va_list);
+int print_intx(va_list);
+int print_into(va_list);
+int print_intu(va_list);
 int print_rev(va_list str);
 int print_rot13(va_list format);
 int print_str(va_list);
