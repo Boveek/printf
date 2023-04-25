@@ -16,7 +16,7 @@ int print_rot13(va_list format)
 	ch = va_arg(format, char *);
 
 	if (ch == NULL)
-		return (0);
+		return (NULL);
 
 	while (ch[i])
 	{
