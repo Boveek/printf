@@ -15,7 +15,10 @@ int print_intp(va_list args)
 
 	memset(convert, 0, sizeof(convert));
 	if (k == 0)
-		count += write(1, "0", 1);
+	{
+		count += write(1, "(nil)", 5);
+		return (count);
+	}
 	i = (sizeof(uintptr_t) * 2 - 3);
 	while (i > 0)
 	{
