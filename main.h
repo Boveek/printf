@@ -22,7 +22,7 @@ typedef struct func
 	char *t;
 	int (*f)(va_list);
 } func_t;
-
+int print_S(va_list res);
 int print_intX(va_list);
 int print_intx(va_list);
 int print_into(va_list);
