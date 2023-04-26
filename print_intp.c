@@ -38,7 +38,12 @@ int print_intp(va_list args)
 	}
 	convert[0] = '0';
 	convert[1] = 'x';
-	convert[sizeof(uintptr_t) * 2] = '\0';
+	i = 2;
+	while (convert[i] == '0')
+	{
+		convert[i] = '\0';
+		i++;
+	}
 	count += write(1, convert, sizeof(uintptr_t) * 2 + 1);
 	return (count);
 }
