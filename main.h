@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdint.h>
+#include <string.h>
 
 int _printf(const char *format, ...);
 int (*format_specifier(const char *format))(va_list);
@@ -32,4 +34,5 @@ int print_percent(va_list);
 int print_int(va_list args);
 int print_inti(va_list args);
 int print_bin(va_list n);
+int print_intp(va_list);
 #endif
