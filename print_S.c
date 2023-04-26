@@ -11,7 +11,7 @@ int print_S(va_list res)
 {
 	char *ch;
 	unsigned int num[6] = {10, 11, 12, 13, 14, 15};
-	char alph[6] = "ABCDEF", hexa[2], hex[2] = "/x";
+	char alph[6] = "ABCDEF", hexa[2], hex[2] = "\\x";
 	unsigned int i = 0, d, count = 0, k, temp;
 
 	ch = va_arg(res, char *);
@@ -36,7 +36,7 @@ int print_S(va_list res)
 					}
 					else if (k == 5 && num[k] != d)
 						hexa[1] = d + '0';
-				}	
+				}
 				hexa[0] = (ch[i] / 16) + '0';
 				count += write(1, hexa, 2);
 			}
