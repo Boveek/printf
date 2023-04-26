@@ -27,17 +27,16 @@ int print_S(va_list res)
 			{
 				temp /= 16;
 				d = ch[i] % 16;
-				if (d > 9)
+				for (k = 0; k < 6; k++)
 				{
-					for (k = 0; k < 6; k++)
-					{
 					if (num[k] == d)
 					{
 						hexa[1] = alph[k];
 						break;
 					}
-					}
-				}
+					else if (k == 5 && num[k] != d)
+						hexa[1] = d + '0';
+				}	
 				hexa[0] = (ch[i] / 16) + '0';
 				count += write(1, hexa, 2);
 			}
