@@ -44,6 +44,6 @@ int print_intp(va_list args)
 		convert[i] = '\0';
 		i++;
 	}
-	count += write(1, convert, sizeof(uintptr_t) * 2 + 1);
+	count += write(1, convert, sizeof(uintptr_t) * 2 - 2);
 	return (count);
 }
