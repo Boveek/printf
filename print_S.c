@@ -10,16 +10,16 @@
 int print_S(va_list res)
 {
 	char *ch;
-	char hex[2] = "/x";
 	unsigned int num[6] = {10, 11, 12, 13, 14, 15};
-	char alph[6] = "ABCDEF";
-	char hexa[2];
+	char alph[6] = "ABCDEF", hexa[2], hex[2] = "/x";
 	unsigned int i = 0, d, count = 0, k, temp;
 
 	ch = va_arg(res, char *);
+	if (ch == NULL)
+		return (0);
 	while (ch[i] != '\0')
 	{
-		if ((ch[i] > 0 && ch[i] < 32) || (ch[i] >= 127))
+		if ((ch[i] >= 0 && ch[i] < 32) || (ch[i] >= 127))
 		{
 			count += write(1, hex, 2);
 			temp = ch[i];
