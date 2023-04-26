@@ -16,8 +16,8 @@ int main(void)
     int i;
     int k;
 
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
+    len = _printf("Let's try to printf \na simple sentence.\n");
+    len2 = printf("Let's try to printf \na simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
 /**    addr = (void *)0x7ffe637541f0;*/
     _printf("Length:[%d, %i]\n", len, len);
@@ -34,8 +34,10 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
-    i = _printf("Address:[%p]\n", NULL);
-    k = printf("Address:[%p]\n", NULL);
+    i = _printf("Can you print an address?\n%p\nNice!\n", (void *)-1);
+    k = printf("Can you print an address?\n%p\nNice!\n", (void *)-1);
+    _printf("Address:[%p]\n", NULL);
+    printf("Address:[%p]\n", NULL);
     printf("%d\n", i);
     printf("%d\n", k);
     len = _printf("Percent:[%%]\n");

@@ -10,7 +10,7 @@ int print_intp(va_list args)
 	unsigned int n, i;
 	unsigned int num[6] = {10, 11, 12, 13, 14, 15};
 	char alp[6] = "abcdef";
-	char convert[sizeof(uintptr_t) * 2 + 1];
+	char convert[sizeof(uintptr_t) * 2 + 2];
 	int p, count = 0;
 
 	memset(convert, 0, sizeof(convert));
@@ -19,7 +19,7 @@ int print_intp(va_list args)
 		count += write(1, "(nil)", 5);
 		return (count);
 	}
-	i = (sizeof(uintptr_t) * 2 - 3);
+	i = (sizeof(uintptr_t) * 2 + 1);
 	while (i > 0)
 	{
 		n = k % 16;
@@ -47,6 +47,6 @@ int print_intp(va_list args)
 		convert[i] = '\0';
 		i++;
 	}
-	count += write(1, convert, sizeof(uintptr_t) * 2 - 2);
+	count += write(1, convert, sizeof(uintptr_t) * 2 + 2);
 	return (count);
 }
