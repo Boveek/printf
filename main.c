@@ -12,14 +12,14 @@ int main(void)
     int len;
     int len2;
     unsigned int ui;
-/**    void *addr;*/
+    void *addr;
     int i;
     int k;
 
     len = _printf("Let's try to printf \na simple sentence.\n");
     len2 = printf("Let's try to printf \na simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
-/**    addr = (void *)0x7ffe637541f0;*/
+    addr = (void *)0x7ffe637541f0;
     _printf("Length:[%d, %i]\n", len, len);
     printf("Length:[%d, %i]\n", len2, len2);
     _printf("Negative:[%d]\n", -762534);
@@ -36,8 +36,8 @@ int main(void)
     printf("String:[%s]\n", "I am a string !");
     i = _printf("Can you print an address?\n%p\nNice!\n", (void *)-1);
     k = printf("Can you print an address?\n%p\nNice!\n", (void *)-1);
-    _printf("Address:[%p]\n", NULL);
-    printf("Address:[%p]\n", NULL);
+    _printf("Address:[%p]\n", addr);
+    printf("Address:[%p]\n", addr);
     printf("%d\n", i);
     printf("%d\n", k);
     len = _printf("Percent:[%%]\n");
